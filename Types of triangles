@@ -1,0 +1,29 @@
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+            int number1, number2, number3;
+
+            number1 = int.Parse(this.textBoxNumber1.Text);
+            number2 = int.Parse(this.textBoxNumber2.Text);
+            number3 = int.Parse(this.textBoxNumber3.Text);
+
+            if (number1 != number2 && number2 != number3 && number3 != number1)
+            {
+                this.textBoxResult.Text = Convert.ToString("Scalene");
+            }
+            else if (number1 == number2 && number1 == number3)
+            {
+                this.textBoxResult.Text = Convert.ToString("Equilateral");
+            }
+            else if (number1 != number3)
+            {
+                this.textBoxResult.Text = Convert.ToString("Isosceles");
+            }
+        }
+
+        private void buttonErase_Click(object sender, EventArgs e)
+        {
+            textBoxNumber1.Clear();
+            textBoxNumber2.Clear();
+            textBoxNumber3.Clear();
+            textBoxResult.Clear();
+        }
